@@ -12,8 +12,12 @@ class LoginPage extends StatelessWidget {
     SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(
         statusBarIconBrightness: Brightness.dark,
-        statusBarColor: Colors.white
+        statusBarColor: Colors.white,
       ),
+    );
+    final TextStyle linkStyle = TextStyle(
+      fontSize: 12,
+      color: Theme.of(context).primaryColor,
     );
     return Scaffold(
       backgroundColor: Colors.white,
@@ -68,9 +72,19 @@ class LoginPage extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 ActionButton(
-                  onPress: () {},
+                  onPress: () {
+                    Navigator.of(context).pushNamed('/home');
+                  },
                   title: "Connexion",
-                )
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text("Mot de passe oublié ?", style: linkStyle),
+                    Text("Inscription", style: linkStyle)
+                  ],
+                ),
               ],
             ),
           ),

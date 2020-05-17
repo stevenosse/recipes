@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 /**
  * Pages import
  */
-import 'package:recipes/pages/login.dart';
+import 'package:recipes/pages/home.dart';
+import 'package:recipes/pages/auth/login.dart';
 
 ///
 /// Declaring app routes here
 ///
 final Map<String, Widget Function(BuildContext)> routes = {
-  "/": (context) => LoginPage()
+  "/": (context) => LoginPage(),
+  "/home": (context) => HomePage(),
 };
