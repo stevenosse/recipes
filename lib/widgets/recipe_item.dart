@@ -118,7 +118,7 @@ class _RecipeItemState extends State<RecipeItem> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  SizedBox(height: 5),
+                  SizedBox(height: 10),
                   Text(
                     "Riz sauce tomate +  viande",
                     style: TextStyle(
