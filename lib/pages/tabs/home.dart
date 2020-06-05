@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:frino_icons/frino_icons.dart';
-import 'package:recipes/widgets/c_app_bar.dart';
-import 'package:recipes/widgets/mini_recipe_item.dart';
-import 'package:recipes/widgets/recipe_item.dart';
+import 'file:///G:/Projets/Personal/recipes/lib/widgets/common/c_app_bar.dart';
+import 'file:///G:/Projets/Personal/recipes/lib/widgets/recipes/mini_recipe_item.dart';
+import 'file:///G:/Projets/Personal/recipes/lib/widgets/recipes/recipe_item.dart';
 
 class HomeTab extends StatefulWidget {
   @override

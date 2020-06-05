@@ -1,6 +1,7 @@
 import 'package:fancy_bottom_bar/fancy_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:frino_icons/frino_icons.dart';
+import 'package:recipes/pages/tabs/discover.dart';
 import 'package:recipes/pages/tabs/home.dart';
 
 class HomePage extends StatefulWidget {
@@ -33,7 +34,7 @@ class _HomePageState extends State<HomePage> {
           },
           children: <Widget>[
             HomeTab(),
-            Container(),
+            DiscoverTab(),
             Container(),
             Container(),
           ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frino_icons/frino_icons.dart';
+import 'package:recipes/widgets/common/badge.dart';
 
 class RecipeItem extends StatefulWidget {
   @override
@@ -9,7 +10,9 @@ class RecipeItem extends StatefulWidget {
 class _RecipeItemState extends State<RecipeItem> {
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final Size size = MediaQuery
+        .of(context)
+        .size;
     return Container(
       width: size.width,
       height: size.height * 0.35,
@@ -37,7 +40,7 @@ class _RecipeItemState extends State<RecipeItem> {
             bottom: 120,
             right: 90,
             child: FloatingActionButton(
-              onPressed: (){},
+              onPressed: () {},
               heroTag: 'like',
               mini: true,
               elevation: 0.5,
@@ -53,13 +56,15 @@ class _RecipeItemState extends State<RecipeItem> {
             bottom: 120,
             right: 45,
             child: FloatingActionButton(
-              onPressed: (){},
+              onPressed: () {},
               mini: true,
               elevation: 0.5,
               backgroundColor: Colors.white,
               child: Icon(
                 FrinoIcons.f_bookmark,
-                color: Theme.of(context).primaryColor,
+                color: Theme
+                    .of(context)
+                    .primaryColor,
                 size: 15,
               ),
             ),
@@ -70,7 +75,9 @@ class _RecipeItemState extends State<RecipeItem> {
   }
 
   Widget _buildGradient() {
-    final Size size = MediaQuery.of(context).size;
+    final Size size = MediaQuery
+        .of(context)
+        .size;
     return Opacity(
       opacity: 0.7,
       child: Container(
@@ -92,7 +99,9 @@ class _RecipeItemState extends State<RecipeItem> {
   }
 
   Widget _buildBottomContainer() {
-    final Size size = MediaQuery.of(context).size;
+    final Size size = MediaQuery
+        .of(context)
+        .size;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: Container(
@@ -221,27 +230,6 @@ class _RecipeItemState extends State<RecipeItem> {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class Badge extends StatelessWidget {
-  final Widget child;
-  final Color color;
-
-  Badge({this.child, this.color});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(8.0),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(4.0),
-        child: child,
       ),
     );
   }
