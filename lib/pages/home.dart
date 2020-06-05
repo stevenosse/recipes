@@ -4,6 +4,7 @@ import 'package:frino_icons/frino_icons.dart';
 import 'package:recipes/pages/tabs/discover.dart';
 import 'package:recipes/pages/tabs/home.dart';
 import 'package:recipes/pages/tabs/profile.dart';
+import 'package:recipes/pages/tabs/settings.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -37,7 +38,7 @@ class _HomePageState extends State<HomePage> {
             HomeTab(),
             DiscoverTab(),
             ProfileTab(),
-            Container(),
+            SettingsTab(),
           ],
         ),
       ),
