@@ -41,6 +41,7 @@ class _MiniRecipeItemState extends State<MiniRecipeItem> {
                   width: 30,
                   child: FloatingActionButton(
                     mini: true,
+                    heroTag: hashCode,
                     backgroundColor: Colors.white,
                     onPressed: () {},
                     child: Icon(

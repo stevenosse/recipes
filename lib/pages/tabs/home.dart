@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frino_icons/frino_icons.dart';
+import 'package:recipes/widgets/c_app_bar.dart';
 import 'package:recipes/widgets/mini_recipe_item.dart';
 import 'package:recipes/widgets/recipe_item.dart';
 
@@ -14,32 +15,9 @@ class _HomeTabState extends State<HomeTab> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12.0),
       child: Column(
-        children: <Widget>[_buildAppbar(), _buildBody()],
-      ),
-    );
-  }
-
-  Widget _buildAppbar() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 12.0),
-      child: Row(
         children: <Widget>[
-          Text(
-            "Recipes",
-            style: TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          Spacer(),
-          IconButton(
-            icon: Icon(FrinoIcons.f_search, size: 18),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(FrinoIcons.f_settings, size: 18),
-            onPressed: () {},
-          )
+          CAppBar(title: "Recipes"),
+          _buildBody(),
         ],
       ),
     );
