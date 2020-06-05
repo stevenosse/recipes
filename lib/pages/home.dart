@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:frino_icons/frino_icons.dart';
 import 'package:recipes/pages/tabs/discover.dart';
 import 'package:recipes/pages/tabs/home.dart';
+import 'package:recipes/pages/tabs/profile.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -35,7 +36,7 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             HomeTab(),
             DiscoverTab(),
-            Container(),
+            ProfileTab(),
             Container(),
           ],
         ),
