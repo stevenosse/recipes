@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:frino_icons/frino_icons.dart';
 import 'package:recipes/widgets/common/c_app_bar.dart';
+import 'package:recipes/widgets/recipes/recipe_item.dart';
+import 'package:recipes/widgets/recipes/recipe_search_item.dart';
 
 class ProfileTab extends StatefulWidget {
   @override
@@ -111,6 +113,53 @@ class _ProfileTabState extends State<ProfileTab> with SingleTickerProviderStateM
                 ],
               ),
             ),
+          ),
+          SizedBox(height: 10),
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
+              children: <Widget>[
+                _buildActivity(),
+                _buildRecipes(),
+                Container(),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
+  _buildActivity() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+      child: ListView(
+        children: <Widget>[
+          RecipeItem(),
+          SizedBox(height: 20),
+          RecipeItem(),
+        ],
+      ),
+    );
+  }
+
+  _buildRecipes() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+      child: Column(
+        children: <Widget>[
+          RecipeSearchItem(
+              image: "https://dpbfm6h358sh7.cloudfront.net/images/17570657/1187781975.jpg",
+              title: "Taro sauce jaune",
+              description: "Envie de vous faire plaisir avec un succulent plat de Taro + sauce jaune et champignon, poulet, peau ou viande de boeuf, n'hésitez plus.",
+              author: "ECWID"
+          ),
+          SizedBox(height: 10),
+          RecipeSearchItem(
+            image: "https://dpbfm6h358sh7.cloudfront.net/images/17570657/1117753196.jpg",
+            title: "Beignets haricots",
+            description: "Envie de vous faire plaisir avec des beignets accompagnés d'haricots et de bouillie de maïs, n'hésitez plus.",
+            author: "ECWID",
           )
         ],
       ),
